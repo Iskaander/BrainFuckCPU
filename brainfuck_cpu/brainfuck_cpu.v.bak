@@ -1,0 +1,35 @@
+module led_blinker (	
+        input  clk,
+        input  rst,
+
+        output reg led1,
+        output reg led2,
+        output reg led3,
+        output reg led4
+        );
+
+reg [3:0] counter = 0; 
+
+reg [31:0] clk_counter = 0;
+reg clk_slow; 
+
+assign low_signal = 1;
+
+always @ (posedge i_clk) begin
+    clk_counter <= (~i_rst) | (clk_counter > 5000000) ? 0 : clk_counter + 1;
+    clk_slow <= ~i_rst           ? 0 : 
+                clk_counter == 1000000 ? ~clk_slow :
+                clk_slow;
+end
+
+always @ (posedge clk_slow) begin
+
+    counter <= (~i_rst) ? 0 : counter + 1;
+    led1 <= (~i_rst) ? 1 : ~counter[3];
+    led2 <= (~i_rst) ? 1 : ~counter[2];
+    led3 <= (~i_rst) ? 1 : ~counter[1];
+    led4 <= (~i_rst) ? 1 : ~counter[0];
+    
+end
+
+endmodule

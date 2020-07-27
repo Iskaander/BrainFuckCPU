@@ -1,0 +1,143 @@
+module brainfuck_main (
+        input clk,
+        input rst,
+
+        output [3:0] led,
+        output uart_out,
+        output [6:0] Segments,
+        output [3:0] Cathodes
+        );
+        
+parameter c_CLKS_PER_BIT = 5208; //9600 baudrate 50MHz clk
+
+wire   clk_slow; 
+reg    clk_slow_reg = 0;
+assign clk_slow = clk_slow_reg;
+
+//data memory initialization
+wire [9:0] address_sig;
+wire [7:0]  q_sig, data_sig;
+wire        wren_sig, rden_sig;
+reg  [9:0] address_sig_reg = 0;
+reg  [7:0]  data_sig_reg = 0;
+reg         wren_sig_reg = 0, rden_sig_reg = 0;
+assign data_sig    = data_sig_reg;
+assign address_sig = address_sig_reg;
+assign wren_sig    = wren_sig_reg;
+assign rden_sig    = rden_sig_reg;
+
+ram RAM_INST (
+    .address (address_sig),
+    .clock   (clk),
+    .data    (data_sig),
+    .rden    (rden_sig),
+    .wren    (wren_sig),
+    .q       (q_sig)
+    );
+
+//program memory initialization
+wire [9:0] prog_address_sig;
+wire [3:0]  prog_q_sig, prog_data_sig;
+wire        prog_wren_sig, prog_rden_sig;
+reg  [9:0] prog_address_sig_reg = 0;
+reg  [3:0]  prog_data_sig_reg = 0;
+reg         prog_wren_sig_reg = 0, prog_rden_sig_reg = 0;
+assign prog_data_sig    = prog_data_sig_reg;
+assign prog_rden_sig    = prog_rden_sig_reg;
+assign prog_address_sig = prog_address_sig_reg;
+assign prog_wren_sig    = prog_wren_sig_reg;
+
+prog_ram PROG_RAM_INST (
+    .address (prog_address_sig),
+    .clock   (clk),
+    .data    (prog_data_sig),
+    .rden    (prog_rden_sig),
+    .wren    (prog_wren_sig),
+    .q       (prog_q_sig)
+    );
+
+//uart module initialization
+wire       w_Tx_Done, r_Tx_DV, w_Tx_Active;
+wire [7:0] r_Tx_Byte;
+reg  [7:0] r_Tx_Byte_reg = 0;
+reg        r_Tx_DV_reg = 0;
+assign     r_Tx_Byte = r_Tx_Byte_reg;
+assign     r_Tx_DV = r_Tx_DV_reg;
+
+uart_tx #(.CLKS_PER_BIT(c_CLKS_PER_BIT)) UART_TX_INST (
+    .i_Clock     (clk),
+    .i_Tx_DV     (r_Tx_DV),
+    .i_Tx_Byte   (r_Tx_Byte),
+    .o_Tx_Active (w_Tx_Active),
+    .o_Tx_Serial (uart_out),
+    .o_Tx_Done   (w_Tx_Done)
+    );
+    
+wire [3:0] Binary_Num_1, Binary_Num_2, Binary_Num_3, Binary_Num_4;
+reg [3:0] Binary_Num_reg_1 = 0, Binary_Num_reg_2 = 0, Binary_Num_reg_3 = 0, Binary_Num_reg_4 = 0;
+
+assign Binary_Num_1 = Binary_Num_reg_1;
+assign Binary_Num_2 = Binary_Num_reg_2;
+assign Binary_Num_3 = Binary_Num_reg_3;
+assign Binary_Num_4 = Binary_Num_reg_4;
+
+seven_segment_controller SEVEN_SEG_INST (
+    .i_Clk (clk),
+    .i_Binary_Num_1 (Binary_Num_1),
+    .i_Binary_Num_2 (Binary_Num_2),
+    .i_Binary_Num_3 (Binary_Num_3),
+    .i_Binary_Num_4 (Binary_Num_4),
+    .o_Segment (Segments),
+    .o_Cathode (Cathodes)
+   );
+    
+    
+reg [31:0] clk_counter = 0;
+
+always @ (posedge clk) begin
+    clk_counter <= (~rst) | (clk_counter > 10000) ? 0 : clk_counter + 1;
+    clk_slow_reg <= ~rst           ? 1'b1 : 
+                clk_counter == 10000 ? ~clk_slow_reg :
+                clk_slow_reg;
+end
+
+reg [3:0] led_reg = 0;
+assign led = led_reg;
+
+reg [9:0] program_counter = 0;
+reg [3:0] cpu_state = 0;
+reg [3:0] bracket_flag = 0;
+reg [9:0] bracket_delta = 10'h0;
+reg flag_output_begin = 0, flag_output_active = 0;
+
+
+
+always @ (posedge clk_slow) begin
+
+    led_reg <= ~address_sig[3:0];
+    Binary_Num_reg_1 <= prog_address_sig_reg[3:0]; //left display
+    Binary_Num_reg_2 <= prog_q_sig[3:0];
+    Binary_Num_reg_3 <= q_sig[7:4];
+    Binary_Num_reg_4 <= q_sig[3:0]; //right display
+    
+end
+
+always @(posedge clk) begin
+
+    flag_output_edge_detect <= flag_output_begin;
+    
+    if (flag_output_begin & (~flag_output_edge_detect) & (flag_output_active == 0)) begin
+        flag_output_active <= 1;
+        r_Tx_DV_reg <= 1;
+        r_Tx_Byte_reg <= q_sig;
+    end
+    else if(flag_output_active == 1) begin
+        r_Tx_DV_reg <= 0;
+        if((w_Tx_Done == 1)) begin
+            flag_output_active <= 0;
+        end
+    end
+    
+end
+
+endmodule

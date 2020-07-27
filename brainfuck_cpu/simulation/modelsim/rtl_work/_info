@@ -1,0 +1,145 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\groun\Desktop\brainfuck_cpu\simulation\modelsim
+vbrainfuck_cpu
+IYmj^7BCLJBAW84Kbd]eaa0
+VDnELXdm:8X`hBaQaIdmfh1
+Z1 dC:\Users\groun\Desktop\brainfuck_cpu\simulation\modelsim
+w1591554803
+8C:/Users/groun/Desktop/brainfuck_cpu/brainfuck_cpu.v
+FC:/Users/groun/Desktop/brainfuck_cpu/brainfuck_cpu.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/groun/Desktop/brainfuck_cpu -O0
+!i10b 1
+!s100 6PN[LnBf2@zMge5_RQmfY2
+!s85 0
+!s108 1591562684.749000
+!s107 C:/Users/groun/Desktop/brainfuck_cpu/brainfuck_cpu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/groun/Desktop/brainfuck_cpu|C:/Users/groun/Desktop/brainfuck_cpu/brainfuck_cpu.v|
+!s101 -O0
+vbrainfuck_cpu_tb
+!i10b 1
+!s100 i@YAQc1NQ8<n0R;o?9cl=3
+I7GFQ]fWI4AfdfTPFU0X>l0
+V?8jnV[kWcGILYD9J[ISPB1
+R1
+w1591562630
+8C:/Users/groun/Desktop/brainfuck_cpu/brainfuck_cpu_tb.v
+FC:/Users/groun/Desktop/brainfuck_cpu/brainfuck_cpu_tb.v
+L0 21
+R2
+r1
+!s85 0
+31
+!s108 1591562684.811000
+!s107 C:/Users/groun/Desktop/brainfuck_cpu/brainfuck_cpu_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/groun/Desktop/brainfuck_cpu|C:/Users/groun/Desktop/brainfuck_cpu/brainfuck_cpu_tb.v|
+!s101 -O0
+R3
+R4
+vbrainfuck_main
+I==LNFUM1d9aIQCSK0l?F?2
+VOb9_f1@2R[8cPaHhfc?SC1
+R1
+w1591562609
+8C:/Users/groun/Desktop/brainfuck_cpu/brainfuck_main.v
+FC:/Users/groun/Desktop/brainfuck_cpu/brainfuck_main.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 [jEPTTWTU524?L_XAiTiz2
+!s85 0
+!s108 1591562684.385000
+!s107 C:/Users/groun/Desktop/brainfuck_cpu/brainfuck_main.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/groun/Desktop/brainfuck_cpu|C:/Users/groun/Desktop/brainfuck_cpu/brainfuck_main.v|
+!s101 -O0
+vprog_ram
+I]:2eYP3Ib<IB?8z6RaQa40
+VJXXk5l>fEm;iY05XM@T3>1
+R1
+w1591384850
+8C:/Users/groun/Desktop/brainfuck_cpu/prog_ram.v
+FC:/Users/groun/Desktop/brainfuck_cpu/prog_ram.v
+L0 39
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 2nH<OBld0`5XMWVlR];`T0
+!s85 0
+!s108 1591562684.551000
+!s107 C:/Users/groun/Desktop/brainfuck_cpu/prog_ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/groun/Desktop/brainfuck_cpu|C:/Users/groun/Desktop/brainfuck_cpu/prog_ram.v|
+!s101 -O0
+vram
+IGLDXi4kLPilLHX@hKL8D^0
+VTCB]UJCnCfkUEGPh4h1k^3
+R1
+w1591362557
+8C:/Users/groun/Desktop/brainfuck_cpu/ram.v
+FC:/Users/groun/Desktop/brainfuck_cpu/ram.v
+L0 39
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 8fn=c?TP5>PFBU?bN^WTk3
+!s85 0
+!s108 1591562684.685000
+!s107 C:/Users/groun/Desktop/brainfuck_cpu/ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/groun/Desktop/brainfuck_cpu|C:/Users/groun/Desktop/brainfuck_cpu/ram.v|
+!s101 -O0
+vseven_segment_controller
+I]2b`HOI[WkC5A8F[o`LmG2
+VOMC3XgzN2E`]>R3miF4Fg3
+R1
+w1591558571
+8C:/Users/groun/Desktop/brainfuck_cpu/seven_segment_controller.v
+FC:/Users/groun/Desktop/brainfuck_cpu/seven_segment_controller.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 433bC]L66iChGnzS60Y>k1
+!s85 0
+!s108 1591562684.489000
+!s107 C:/Users/groun/Desktop/brainfuck_cpu/seven_segment_controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/groun/Desktop/brainfuck_cpu|C:/Users/groun/Desktop/brainfuck_cpu/seven_segment_controller.v|
+!s101 -O0
+vuart_tx
+IRgJkeU=oM<_aRGNon<e7F2
+VLImI8l>cm>zdaY8dV4aJV1
+R1
+w1591553561
+8C:/Users/groun/Desktop/brainfuck_cpu/uart_tx.v
+FC:/Users/groun/Desktop/brainfuck_cpu/uart_tx.v
+L0 14
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 JPlMoRPZMT3e]DA8QR]:H2
+!s85 0
+!s108 1591562684.618000
+!s107 C:/Users/groun/Desktop/brainfuck_cpu/uart_tx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/groun/Desktop/brainfuck_cpu|C:/Users/groun/Desktop/brainfuck_cpu/uart_tx.v|
+!s101 -O0

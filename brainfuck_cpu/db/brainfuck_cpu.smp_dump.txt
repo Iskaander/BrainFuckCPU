@@ -1,0 +1,23 @@
+
+State Machine - |brainfuck_main|brainfuck_cpu:BRAINFUCK_INST|bracket_flag
+Name bracket_flag.0000 bracket_flag.FIND_CLOSING_BRACKET bracket_flag.FIND_OPENING_BRACKET 
+bracket_flag.0000 0 0 0 
+bracket_flag.FIND_OPENING_BRACKET 1 0 1 
+bracket_flag.FIND_CLOSING_BRACKET 1 1 0 
+
+State Machine - |brainfuck_main|brainfuck_cpu:BRAINFUCK_INST|cpu_state
+Name cpu_state.WAIT2 cpu_state.WAIT cpu_state.HALT cpu_state.WAIT1 cpu_state.INSTR_ANALYSIS cpu_state.00000000 
+cpu_state.00000000 0 0 0 0 0 0 
+cpu_state.INSTR_ANALYSIS 0 0 0 0 1 1 
+cpu_state.WAIT1 0 0 0 1 0 1 
+cpu_state.HALT 0 0 1 0 0 1 
+cpu_state.WAIT 0 1 0 0 0 1 
+cpu_state.WAIT2 1 0 0 0 0 1 
+
+State Machine - |brainfuck_main|uart_tx:UART_TX_INST|r_SM_Main
+Name r_SM_Main.s_TX_STOP_BIT r_SM_Main.s_TX_DATA_BITS r_SM_Main.s_TX_START_BIT r_SM_Main.000 r_SM_Main.s_CLEANUP 
+r_SM_Main.000 0 0 0 0 0 
+r_SM_Main.s_TX_START_BIT 0 0 1 1 0 
+r_SM_Main.s_TX_DATA_BITS 0 1 0 1 0 
+r_SM_Main.s_TX_STOP_BIT 1 0 0 1 0 
+r_SM_Main.s_CLEANUP 0 0 0 1 1 

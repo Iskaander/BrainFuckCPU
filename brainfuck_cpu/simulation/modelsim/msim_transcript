@@ -1,0 +1,131 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do brainfuck_cpu_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/groun/Desktop/brainfuck_cpu {C:/Users/groun/Desktop/brainfuck_cpu/brainfuck_main.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module brainfuck_main
+# 
+# Top level modules:
+# 	brainfuck_main
+# vlog -vlog01compat -work work +incdir+C:/Users/groun/Desktop/brainfuck_cpu {C:/Users/groun/Desktop/brainfuck_cpu/seven_segment_controller.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module seven_segment_controller
+# 
+# Top level modules:
+# 	seven_segment_controller
+# vlog -vlog01compat -work work +incdir+C:/Users/groun/Desktop/brainfuck_cpu {C:/Users/groun/Desktop/brainfuck_cpu/prog_ram.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module prog_ram
+# 
+# Top level modules:
+# 	prog_ram
+# vlog -vlog01compat -work work +incdir+C:/Users/groun/Desktop/brainfuck_cpu {C:/Users/groun/Desktop/brainfuck_cpu/uart_tx.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module uart_tx
+# 
+# Top level modules:
+# 	uart_tx
+# vlog -vlog01compat -work work +incdir+C:/Users/groun/Desktop/brainfuck_cpu {C:/Users/groun/Desktop/brainfuck_cpu/ram.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ram
+# 
+# Top level modules:
+# 	ram
+# vlog -vlog01compat -work work +incdir+C:/Users/groun/Desktop/brainfuck_cpu {C:/Users/groun/Desktop/brainfuck_cpu/brainfuck_cpu.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module brainfuck_cpu
+# 
+# Top level modules:
+# 	brainfuck_cpu
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/groun/Desktop/brainfuck_cpu {C:/Users/groun/Desktop/brainfuck_cpu/brainfuck_cpu_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module brainfuck_cpu_tb
+# 
+# Top level modules:
+# 	brainfuck_cpu_tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  brainfuck_cpu_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps brainfuck_cpu_tb 
+# Loading work.brainfuck_cpu_tb
+# Loading work.brainfuck_main
+# Loading work.ram
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.prog_ram
+# Loading work.uart_tx
+# Loading work.brainfuck_cpu
+# Loading work.seven_segment_controller
+# ** Warning: (vsim-3017) C:/Users/groun/Desktop/brainfuck_cpu/brainfuck_cpu_tb.v(28): [TFMPC] - Too few port connections. Expected 6, found 4.
+# 
+#         Region: /brainfuck_cpu_tb/DUT
+# ** Warning: (vsim-3722) C:/Users/groun/Desktop/brainfuck_cpu/brainfuck_cpu_tb.v(28): [TFMPC] - Missing connection for port 'Segments'.
+# 
+# ** Warning: (vsim-3722) C:/Users/groun/Desktop/brainfuck_cpu/brainfuck_cpu_tb.v(28): [TFMPC] - Missing connection for port 'Cathodes'.
+# 
+# ** Warning: (vsim-3017) C:/Users/groun/Desktop/brainfuck_cpu/brainfuck_main.v(110): [TFMPC] - Too few port connections. Expected 8, found 7.
+# 
+#         Region: /brainfuck_cpu_tb/DUT/SEVEN_SEG_INST
+# ** Warning: (vsim-3722) C:/Users/groun/Desktop/brainfuck_cpu/brainfuck_main.v(110): [TFMPC] - Missing connection for port 'reset'.
+# 
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+add wave -position insertpoint  \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/address_sig \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/address_sig_reg \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/bracket_delta \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/bracket_flag \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/clk \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/cpu_state \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/data_sig \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/data_sig_reg \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/flag_output_active \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/flag_output_begin \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/flag_output_begin_reg \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/prog_address_sig \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/prog_address_sig_reg \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/prog_data_sig \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/prog_data_sig_reg \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/prog_q_sig \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/prog_rden_sig \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/prog_rden_sig_reg \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/prog_wren_sig \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/prog_wren_sig_reg \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/program_counter \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/q_sig \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/rden_sig \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/rden_sig_reg \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/rst \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/wren_sig \
+sim:/brainfuck_cpu_tb/DUT/BRAINFUCK_INST/wren_sig_reg
+restart
+# ** Warning: (vsim-3017) C:/Users/groun/Desktop/brainfuck_cpu/brainfuck_cpu_tb.v(28): [TFMPC] - Too few port connections. Expected 6, found 4.
+# 
+#         Region: /brainfuck_cpu_tb/DUT
+# ** Warning: (vsim-3722) C:/Users/groun/Desktop/brainfuck_cpu/brainfuck_cpu_tb.v(28): [TFMPC] - Missing connection for port 'Segments'.
+# 
+# ** Warning: (vsim-3722) C:/Users/groun/Desktop/brainfuck_cpu/brainfuck_cpu_tb.v(28): [TFMPC] - Missing connection for port 'Cathodes'.
+# 
+# ** Warning: (vsim-3017) C:/Users/groun/Desktop/brainfuck_cpu/brainfuck_main.v(110): [TFMPC] - Too few port connections. Expected 8, found 7.
+# 
+#         Region: /brainfuck_cpu_tb/DUT/SEVEN_SEG_INST
+# ** Warning: (vsim-3722) C:/Users/groun/Desktop/brainfuck_cpu/brainfuck_main.v(110): [TFMPC] - Missing connection for port 'reset'.
+# 
+run -all
+add wave -position insertpoint  \
+sim:/brainfuck_cpu_tb/clk

@@ -1,0 +1,157 @@
+Flow report for brainfuck_cpu
+Sun Jul 12 12:17:54 2020
+Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2014 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Flow Summary                                                                    ;
++------------------------------------+--------------------------------------------+
+; Flow Status                        ; Successful - Sun Jul 12 12:17:54 2020      ;
+; Quartus II 64-Bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
+; Revision Name                      ; brainfuck_cpu                              ;
+; Top-level Entity Name              ; brainfuck_main                             ;
+; Family                             ; Cyclone IV E                               ;
+; Device                             ; EP4CE6E22C8                                ;
+; Timing Models                      ; Final                                      ;
+; Total logic elements               ; 317 / 6,272 ( 5 % )                        ;
+;     Total combinational functions  ; 273 / 6,272 ( 4 % )                        ;
+;     Dedicated logic registers      ; 204 / 6,272 ( 3 % )                        ;
+; Total registers                    ; 204                                        ;
+; Total pins                         ; 18 / 92 ( 20 % )                           ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 12,288 / 276,480 ( 4 % )                   ;
+; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                              ;
++------------------------------------+--------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 07/12/2020 12:17:32 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; brainfuck_cpu       ;
++-------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                 ;
++--------------------------------------+---------------------------------------+---------------+----------------+------------------+
+; Assignment Name                      ; Value                                 ; Default Value ; Entity Name    ; Section Id       ;
++--------------------------------------+---------------------------------------+---------------+----------------+------------------+
+; COMPILER_SIGNATURE_ID                ; 273777358882289.159454545202896       ; --            ; --             ; --               ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --             ; brainfuck_cpu_tb ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; brainfuck_cpu_tb                      ; --            ; --             ; eda_simulation   ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --            ; --             ; eda_simulation   ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)             ; <None>        ; --             ; --               ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --             ; eda_simulation   ;
+; EDA_TEST_BENCH_FILE                  ; brainfuck_cpu_tb.v                    ; --            ; --             ; brainfuck_cpu_tb ;
+; EDA_TEST_BENCH_MODULE_NAME           ; brainfuck_cpu_tb                      ; --            ; --             ; brainfuck_cpu_tb ;
+; EDA_TEST_BENCH_NAME                  ; brainfuck_cpu_tb                      ; --            ; --             ; eda_simulation   ;
+; EDA_TIME_SCALE                       ; 1 ps                                  ; --            ; --             ; eda_simulation   ;
+; IOBANK_VCCIO                         ; 3.3V                                  ; --            ; --             ; 3                ;
+; IOBANK_VCCIO                         ; 3.3V                                  ; --            ; --             ; 4                ;
+; IOBANK_VCCIO                         ; 3.3V                                  ; --            ; --             ; 5                ;
+; IOBANK_VCCIO                         ; 3.3V                                  ; --            ; --             ; 6                ;
+; IOBANK_VCCIO                         ; 3.3V                                  ; --            ; --             ; 7                ;
+; IOBANK_VCCIO                         ; 3.3V                                  ; --            ; --             ; 8                ;
+; IOBANK_VCCIO                         ; 3.3V                                  ; --            ; --             ; 1                ;
+; IOBANK_VCCIO                         ; 3.3V                                  ; --            ; --             ; 2                ;
+; IP_TOOL_NAME                         ; RAM: 1-PORT                           ; --            ; --             ; --               ;
+; IP_TOOL_NAME                         ; RAM: 1-PORT                           ; --            ; --             ; --               ;
+; IP_TOOL_NAME                         ; ALTPLL                                ; --            ; --             ; --               ;
+; IP_TOOL_NAME                         ; ALTPLL                                ; --            ; --             ; --               ;
+; IP_TOOL_VERSION                      ; 13.1                                  ; --            ; --             ; --               ;
+; IP_TOOL_VERSION                      ; 13.1                                  ; --            ; --             ; --               ;
+; IP_TOOL_VERSION                      ; 13.1                                  ; --            ; --             ; --               ;
+; IP_TOOL_VERSION                      ; 13.1                                  ; --            ; --             ; --               ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --             ; --               ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --             ; --               ;
+; MISC_FILE                            ; PLL.ppf                               ; --            ; --             ; --               ;
+; MISC_FILE                            ; PLL1_bb.v                             ; --            ; --             ; --               ;
+; MISC_FILE                            ; PLL1.ppf                              ; --            ; --             ; --               ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --             ; --               ;
+; PARTITION_COLOR                      ; 16764057                              ; --            ; brainfuck_main ; Top              ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; brainfuck_main ; Top              ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; brainfuck_main ; Top              ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --             ; --               ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --             ; --               ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --             ; --               ;
+; TOP_LEVEL_ENTITY                     ; brainfuck_main                        ; brainfuck_cpu ; --             ; --               ;
++--------------------------------------+---------------------------------------+---------------+----------------+------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 4634 MB             ; 00:00:02                           ;
+; Fitter                    ; 00:00:07     ; 1.0                     ; 4971 MB             ; 00:00:06                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4591 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4631 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4541 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:16     ; --                      ; --                  ; 00:00:12                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; DESKTOP-DF13P4O  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-DF13P4O  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-DF13P4O  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-DF13P4O  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-DF13P4O  ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off brainfuck_cpu -c brainfuck_cpu
+quartus_fit --read_settings_files=off --write_settings_files=off brainfuck_cpu -c brainfuck_cpu
+quartus_asm --read_settings_files=off --write_settings_files=off brainfuck_cpu -c brainfuck_cpu
+quartus_sta brainfuck_cpu -c brainfuck_cpu
+quartus_eda --read_settings_files=off --write_settings_files=off brainfuck_cpu -c brainfuck_cpu
+
+
+

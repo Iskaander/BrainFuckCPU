@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="brainfuck_cpu">
+		<CBX_INST_ENTRY INSTANCE_NAME="|brainfuck_main|PLL1:PLL_INST1|altpll:altpll_component" CBX_FILE_NAME="PLL1_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|brainfuck_main|PLL:PLL_INST|altpll:altpll_component" CBX_FILE_NAME="PLL_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|brainfuck_main|prog_ram:PROG_RAM_INST|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_rci1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|brainfuck_main|ram:RAM_INST|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_e5g1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
